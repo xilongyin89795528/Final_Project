@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>My Website</title>
+</head>
+<body>
+  <header>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <div class="logo">Animal Crossing</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="main.html">Animals</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="activities.html" class="active">Activities</a></li>
+        <li><a href="home.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+<section>
+    <div class="fishing">
+        <h1>Fishing</h1>
+
+ 
+        <video id="FishingVideo" width="640" height="360">
+            <source src="video/Fishing.MP4" type="video/mp4">
+        </video>
+        <p>Demo Video</p>
+        <button id="playPauseFishing" class="play" aria-label="Play or Pause Audio"></button>
+    </div>
+</section>
+
+<section>
+    <div class="diving">
+        <h1>Diving for Sea Creatures</h1>
+        <video id="DivingVideo" width="640" height="360">
+            <source src="video/Diving.MP4" type="video/mp4">
+        </video>
+        <p>Demo Video</p>
+        <button id="playPauseDiving" class="play" aria-label="Play or Pause Audio"></button>
+    </div>
+</section>
+
+<section>
+    <div class="catching">
+        <h1>Bug Catching</h1>
+        <video id="CatchingVideo" width="640" height="360">
+            <source src="video/Catching.MP4" type="video/mp4">
+        </video>
+        <p>Demo Video</p>
+        <button id="playPauseCatching" class="play" aria-label="Play or Pause Audio"></button>
+    </div>
+</section>
+
+</main>
+
+<script>
+    const videoFishing = document.getElementById('FishingVideo');
+    const playPauseFishing = document.getElementById('playPauseFishing');
+
+    playPauseFishing.addEventListener('click', () => {
+        if (videoFishing.paused) {
+            videoFishing.play();
+            playPauseFishing.className = 'pause'; 
+        } else {
+            videoFishing.pause();
+            playPauseFishing.className = 'play';  
+        }
+    });
+    
+    const videoDiving = document.getElementById('DivingVideo');
+    const playPauseDiving = document.getElementById('playPauseDiving');
+
+
+    playPauseDiving.addEventListener('click', () => {
+        if (videoDiving.paused) {
+            videoDiving.play(); 
+            playPauseDiving.className = 'pause'; 
+        } else {
+            videoDiving.pause(); 
+            playPauseDiving.className = 'play'; 
+        }
+    });
+
+    const videoCatching = document.getElementById('CatchingVideo');
+    const playPauseCatching = document.getElementById('playPauseCatching');
+
+
+
+    playPauseCatching.addEventListener('click', () => {
+        if (videoCatching.paused) {
+            videoCatching.play();
+            playPauseCatching.className = 'pause'; 
+        } else {
+            videoCatching.pause();
+            playPauseCatching.className = 'play';  
+        }
+    });
+</script>
+
+</body>
+</html>

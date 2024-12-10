@@ -1,0 +1,642 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --text-color: #415351; 
+    --secondary-color: rgb(251, 251, 150, 0.7);
+    --box-color: rgba(157, 233, 213, 0.5); 
+}
+  
+  body {
+    font-family: "Pangolin", cursive;
+    background: url('/images/background3.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(157, 233, 213, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav .nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  nav .nav-links li a:hover {
+    background: var(--text-color);
+    color: #ffffff;
+  }
+
+  nav .nav-links li a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 12px; 
+    color: var(--text-color);
+  }
+
+  /* all the classes for scrolling pics */
+  .screen {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    margin: 6rem auto 2rem;
+    overflow: hidden; 
+    border-radius: 40px;
+    padding: 1rem;
+    position: relative; 
+}
+
+.screen img {
+    border-radius: 40px;
+    flex-shrink: 0;
+    width: 700px;
+    height: auto; 
+    animation: slide 20s infinite; /*scrolling time for a round of five pics*/
+}
+
+/* automatically scrolling pics for five pictures */
+@keyframes slide {
+  0% {
+      transform: translateX(0); 
+  }
+  10% {
+      transform: translateX(0); 
+  }
+  20% {
+      transform: translateX(-100%);
+  }
+  30% {
+      transform: translateX(-100%); 
+  }
+  40% {
+      transform: translateX(-200%); 
+  }
+  50% {
+      transform: translateX(-200%);
+  }
+  60% {
+      transform: translateX(-300%); 
+  }
+  70% {
+      transform: translateX(-300%); 
+  }
+  80% {
+      transform: translateX(-400%);
+  }
+  90% {
+    transform: translateX(-400%); 
+  }
+  100%{
+    transform: translateX(0); 
+  }
+}
+
+h1{
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 60px;
+}
+
+p{
+  font-size: 1.75rem;
+}
+
+img{
+  transition: transform 0.3s ease, border 0.3s ease;
+  border-radius: 40px;
+}
+
+img:hover{
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #f4f2c4);
+}
+
+.animals h1{
+  margin:20px;
+}
+
+.portfolio{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.portfolio-item {
+  text-align: center;
+}
+  .portfolio-item p{
+    margin-top: 20px;
+  }
+
+  .portfolio-item img {
+    margin: 0 140px;
+    filter: drop-shadow(0 0 5px #f1c4db);
+}
+
+  .portfolio-item img:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #f1c4db);
+  }
+
+  .profile{
+    display:flex;
+    justify-content: center;
+  }
+
+  .profile img{
+    margin: 0 20px;
+  }
+
+  .info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    border-radius: 40px;
+    transition: transform 0.3s ease, border 0.3s ease;
+  }
+  
+
+  .info:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #f4f2c4);
+  }
+
+  .info p{
+    padding: 15px;
+  }
+
+  .house > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+  }
+
+  .house >div >div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+  .house p{
+    margin-top: 20px;
+  }
+
+  .dresscode > div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  .dresscode p{
+    margin-top: 20px;
+    font-size: 1.25rem;
+  }
+
+  .dresscode img{
+    filter: drop-shadow(0 0 5px #306399);
+  }
+
+  .dresscode img:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #306399);
+  }
+
+  .album p{
+    margin-top: 20px;
+    font-size: 1.25rem;
+  }
+
+  button{
+    transition: transform 0.3s ease, border 0.3s ease;
+  }
+
+  button:hover{
+    transform: scale(1.1);
+  }
+
+  button.play{
+    margin:20px;
+    width: 100px;
+    height: 100px;
+    background: url('/images/PlayIcon.png') no-repeat center;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+  }
+
+  button.pause {
+    margin:20px;
+    width: 100px;
+    height: 100px;
+    background: url('/images/PauseIcon.png') no-repeat center;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+  .box{
+    display:none;
+  }
+
+/* activities page */
+
+ .fishing, .diving, .catching{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .fishing button, .diving button, .catching button{
+  margin-top:40px;
+ }
+
+ .fishing video, .diving video, .catching video{
+  border-radius: 40px;
+ }
+
+ .fishing p, .diving p, .catching p{
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+ }
+
+ /* locations page */
+ .museum .screen{
+  margin: 2rem auto;
+ }
+
+ .museum h1{
+  margin: 80px 0 40px 0;
+ }
+
+ .museum h2{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 80px;
+ }
+
+ .aquarium, .fossil, .insectarium {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: rgb(251, 251, 150, 0.5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.aquarium:hover, .fossil:hover, .insectarium:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+ .context {
+  font-size: 1.75rem;
+  max-width: 600px; 
+  padding: 20px;
+}
+
+.store > div, .cloth>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 120px;
+}
+
+.store >div >div, .cloth>div>div {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.store p, .cloth p{
+  max-width: 1200px;
+  text-align: center;
+  margin: 20px auto 50px;
+}
+
+.store, .cloth{
+  padding: 5px;
+  background-color: rgba(255, 239, 247, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 40px;
+  margin: 30px;
+}
+
+.cloth{
+  background-color: rgba(157, 233, 213, 0.5);
+}
+
+.store:hover, .cloth:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* home page */
+.meme{
+  padding: 20px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f2c4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 40px;
+  margin: 30px;
+}
+
+.meme:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.me img{
+  margin: 0 140px;
+  filter: drop-shadow(0 0 5px #f1c4db);
+}
+
+.me img:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #f1c4db);
+}
+
+.me p{
+  font-size: 1.5rem;
+  max-width: 600px; 
+  padding: 20px;
+}
+
+  .room p{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+  }
+
+  .room{
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  main {
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+  }
+
+
+  @media (max-width: 768px) {
+    body {
+      padding: 1rem;
+    }
+  
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+      box-shadow: none !important;
+    }
+
+    header {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .nav-links li a {
+      font-size: 1.5rem;
+      padding: 0.3rem 0.5rem;
+    }
+
+    .screen {
+      width: 100%; 
+      padding: 0.5rem;
+    }
+  
+    .screen img {
+      width: 100%;
+    }
+
+    .portfolio-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .portfolio {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .portfolio-item img{
+      width: 50%;
+      max-width: 150px;
+      height: auto;
+    }
+
+    .profile img {
+      max-width: 250px;
+      height: auto;
+      padding: 20px;
+    }
+
+    .profile{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .house>div{
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+    }
+
+    .dresscode>div{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dresscode img{
+      max-width: 100px;
+    }
+
+    .aquarium, .fossil, .insectarium {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .context {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .me {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .photo img {
+      margin: 0 auto; 
+    }
+  
+    .selfintro {
+      padding: 1rem;
+    }
+
+    button {
+      width: 80px;
+      height: 80px;
+    }
+
+    .store > div, .cloth > div {
+      flex-direction: column;
+      gap: 20px; 
+    }
+  
+    .store img, .cloth img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .store p, .cloth p {
+      font-size: 1.2rem;
+    }
+
+    video {
+      width: 100%; 
+      height: auto; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+
+
+    .me{
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+    }
+
+    .meme {
+      width:100%;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .meme img {
+      max-width: 50%;
+    }
+
+    .meme p {
+      font-size: 1rem; 
+      max-width: 100%;
+  }
+
+    .room{
+      
+      flex-direction: column;
+    }
+
+    main{
+      margin-top:190px;
+    }
+
+  }
+
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  
+    img, .screen img, .aquarium, .fossil, .insectarium, .store, .cloth, .meme, .portfolio, .dresscode {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  
+    .info:hover, .store:hover, .cloth:hover, .aquarium:hover, .fossil:hover, .insectarium:hover, img:hover {
+      transform: none !important;
+      filter: none !important;
+    }
+  }
+  
+
+
+  
+
+
+
+
+
+
+  
