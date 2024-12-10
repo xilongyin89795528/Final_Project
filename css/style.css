@@ -13,7 +13,7 @@
   
   body {
     font-family: "Pangolin", cursive;
-    background: url('/images/background3.jpg') no-repeat center center fixed;
+    background: url('../images/background3.jpg') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     flex-direction: column;
